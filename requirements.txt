@@ -1,4 +1,2 @@
 nltk
-re
-pprint
 tweepy
