@@ -1,2 +1,3 @@
 nltk
 tweepy
+scikit-learn
