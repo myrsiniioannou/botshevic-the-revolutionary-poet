@@ -1,7 +1,6 @@
 # packages in environment at C:\ProgramData\Anaconda3:
 #
 # Name                    Version                   Build  Channel
-_ipyw_jlab_nb_ext_conf    0.1.0                    py38_0  
 alabaster                 0.7.12                     py_0  
 anaconda                  2020.07                  py38_0  
 anaconda-client           1.7.2                    py38_0  
