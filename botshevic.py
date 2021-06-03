@@ -1,6 +1,7 @@
 import nltk
 import random
 from nltk.tokenize import TweetTokenizer
+nltk.download('averaged_perceptron_tagger')
 import os
 import tweepy
 
