@@ -1,22 +1,8 @@
-import nltk, re, pprint
-nltk.download('punkt')
-nltk.download('averaged_perceptron_tagger')
-nltk.download('C:')
-nltk.download ('stopwords')
+import nltk
 import random
-from random import randrange
-import collections
-from nltk.tokenize import TweetTokenizer, RegexpTokenizer
-from nltk.corpus import stopwords
-import string
-import itertools
+from nltk.tokenize import TweetTokenizer
 import os
-from sklearn.feature_extraction.text import CountVectorizer
-import pandas as pd
 import tweepy
-import time
-
-
 
 ### 1. Read & Tokenize a text file - function
 
@@ -175,7 +161,15 @@ def poem_generator(direct, number_of_lines):
 
 
 
-## 7. Twitter Authentication
+
+# RUN THE SCRIPT
+
+directory= 'Corpus\\'
+#print(poem_generator(directory,5))
+
+
+
+# Twitter
 CONSUMER_KEY = 'mDgBJy8f4FP511hBId8sPp94a'
 CONSUMER_SECRET = '2bEYAtiKj9db2G9GfWzkju2NKjznmrTJAy5RJHJLiDydmT3bEK'
 ACCESS_KEY = '1399298847143251969-xfcOHTbvXbQcwiwogIxmhSpHF8SEgM'
@@ -183,13 +177,11 @@ ACCESS_SECRET = 'tYlYRHd7y1cHcSYau4dJnhcPIi9XqIMnl8tj1BfX8tfcI'
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 
-
-### 8. Make a tweet
 # Create API object
-directory= '..\\Corpus\\'
 api = tweepy.API(auth)
-api.update_status(poem_generator(directory,random.randint(1,10)))
 
+# Create a tweet
+#api.update_status("Hello Tweepy")
 
-# RUN THE SCRIPT
-#print(poem_generator(directory,10))
+poem_tweet = poem_generator(directory,random.randint(1,5))
+api.update_status(poem_tweet)
