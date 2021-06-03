@@ -164,7 +164,7 @@ def poem_generator(direct, number_of_lines):
 
 # RUN THE SCRIPT
 
-directory= 'Corpus\\'
+directory= 'Corpus/'
 #print(poem_generator(directory,5))
 
 
