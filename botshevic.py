@@ -184,5 +184,6 @@ api = tweepy.API(auth)
 # Create a tweet
 #api.update_status("Hello Tweepy")
 
-poem_tweet = poem_generator(directory,random.randint(1,5))
+poem_tweet = poem_generator(directory,random.randint(1,2))
+#print(poem_tweet)
 api.update_status(poem_tweet)
